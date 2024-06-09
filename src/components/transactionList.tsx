@@ -53,6 +53,9 @@ export default function TransactionsList({
         message: { raw: userOpHash as `0x${string}` },
       });
 
+      console.log(signature);
+      
+
       const response = await fetch("/api/create-signature", {
         method: "POST",
         body: JSON.stringify({
@@ -62,6 +65,8 @@ export default function TransactionsList({
         }),
       });
       const data = await response.json();
+      console.log(data);
+      
 
       if (data.error) throw new Error(data.error);
 
@@ -98,7 +103,7 @@ export default function TransactionsList({
         initCode = Uint8Array.from([]);
       }
 
-      const builder = await getUserOperationBuilder(
+      const builder = await getUserOperationBuilder( 
         userOp.sender,
         BigNumber.from(userOp.nonce),
         initCode,
@@ -185,7 +190,7 @@ export default function TransactionsList({
                   <Button
                     onClick={() =>
                       window.open(
-                        `https://goerli.etherscan.io/tx/${transaction.txHash}`,
+                        `https://sepolia.etherscan.io/tx/${transaction.txHash}`,
                         "_blank"
                       )
                     }

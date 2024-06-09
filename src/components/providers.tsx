@@ -14,7 +14,7 @@ const { chains, publicClient } = configureChains([sepolia], [publicProvider()]);
 const { connectors } = getDefaultWallets({
   appName: "scw",
   projectId: `${process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID}`,
-  chains,
+  chains ,
 });
 
 const wagmiConfig = createConfig({

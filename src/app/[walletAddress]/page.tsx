@@ -113,7 +113,6 @@ export default function WalletPage({
           setAmount(parseFloat(e.target.value));
         }}
       />
-
       <Button isLoading={loading} onClick={createTransaction}>
         Create Txn
       </Button>

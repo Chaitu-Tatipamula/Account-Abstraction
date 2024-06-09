@@ -70,7 +70,7 @@ export default function WalletList({ address }: { address: string }) {
                         <Icon type="user" />
                         <p className="text-gray-300 font-mono">{signer}</p>
                         <Link
-                          href={`https://goerli.etherscan.io/address/${signer}`}
+                          href={`https://sepolia.etherscan.io/address/${signer}`}
                           target="_blank"
                           className="text-blue-500 hover:text-blue-600"
                         >
