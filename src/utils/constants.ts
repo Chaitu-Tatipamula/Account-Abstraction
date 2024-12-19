@@ -1,7 +1,7 @@
 export const WALLET_FACTORY_ADDRESS =
   "0x6630856453a9ECfBe17B310e6A5Ae44E7B517B0C";
 
-export const BUNDLER_RPC_URL = `https://api.stackup.sh/v1/node/${process.env.NEXT_PUBLIC_STACKUP_API_KEY}`;
+  export const BUNDLER_RPC_URL = `https://eth-sepolia.g.alchemy.com/v2/${process.env.NEXT_PUBLIC_STACKUP_API_KEY}`;
 
 export const WALLET_FACTORY_ABI = [
   {
